@@ -1,0 +1,117 @@
+:root{
+    --color-1: #54428e;
+    --color-2: #AFE3C0;
+    --color-3: #e4f5ea;
+    --color-4: #B7C3F3;
+    --color-5: #dd7596;
+    --color-6: black;
+
+}
+
+*, html {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-6);
+}
+
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 32px;
+    --fontSize: 48px;
+    font-size: var(--fontSize);
+    background-color: var(--color-6);
+    color: var(--color-4)
+}
+
+svg {
+    padding: 8px;
+    height: var(--fontSize);
+}
+
+.selecao {
+    font-size: 24px;
+    background-color: #54428e;
+    text-align: center;
+    padding: 16px;
+    
+}
+
+form {
+    color: var(--color-4);
+}
+input {
+    width: 100%;
+    outline: none;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+    padding: 0px;
+}
+
+body :not(header) {
+    padding: 24px;
+}
+
+body > :nth-child(2) {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    height:100%;
+    background-color: var(--color-2);
+}
+
+
+.add {
+    padding-left: 128px;
+    padding-right: 128px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2,50%);
+}
+
+button {
+    border: 0px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+button, input {
+    box-shadow: 4px 6px 8px rgba(0,0,0,.6);
+}
+
+#quantidade > button {
+    padding: 0px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    font-size: 32px;
+}
+
+form > button {
+    color: white;
+    border: 0px;
+    width: 60%;
+    margin: 24px 20%;
+    background-color: var(--color-6);
+}
+
+.promocao{
+    background-color:#B7C3F3;
+}
+
+.promocao > div {
+    font-size: 20px;
+    width: fit-content;
+    background-color: white;
+
+}
+
+#quantidade {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
