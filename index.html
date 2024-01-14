@@ -1,31 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Sorteio Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        RIFA TERRENO
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+    </header>
+    <div id = "noheader">
+        <h2>Terreno em Iracema</h2>
+        <img src="https://vempracasa.com/imoveis/imagens/2074960/1670353516356-570x425.jpg" alt="">
+        <div>
+            Localizado em: Rua ABC <br>
+            Dimensões: 10m por 20m
+        </div>
+        <div class="promocao">
+            <div>
+                <h1>Promoção</h1>
+                10 números por R$35,00
+            </div>
+        </div>
+        <form action="javascript:;" onsubmit="myFunction(this)">
+            <h1>Cotas</h1>
+            <div class="selecao">
+                <div>Selecione a quantidade de números</div>
+                <div class="add">
+                    <button>5</button>
+                    <button>10</button>
+                    <button>50</button>
+                    <button>100</button>
+                </div>
+                <div id="quantidade">
+                    <button>
+                        <span>-</span>
+                    </button>
+                    <input type="number" placeholder="1" name="quantidade" />
+                    <button>
+                        <span>+</span>
+                    </button>
+                </div>
+            </div>
+            <button type="submit">Participar do sorteio</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
 
-    <h1>Sistema de Sorteio Online</h1>
-
-    <form id="sorteioForm">
-        <label for="quantidadeNumeros">Quantidade de Números:</label>
-        <input type="number" id="quantidadeNumeros" name="quantidadeNumeros" min="1" required>
-
-        <label for="nomeComprador">Nome do Comprador:</label>
-        <input type="text" id="nomeComprador" name="nomeComprador" required>
-
-        <label for="nomeVendedor">Nome do Vendedor:</label>
-        <input type="text" id="nomeVendedor" name="nomeVendedor" required>
-
-        <button type="button" onclick="realizarSorteio()">Realizar Sorteio</button>
-    </form>
-
-    <script>
-        function realizarSorteio() {
-            var quantidadeNumeros = document.getElementById('quantidadeNumeros').value;
-            var nomeComprador = document.getElementById('nomeComprador').value;
+</html>
             var nomeVendedor = document.getElementById('nomeVendedor').value;
 
             var numerosSorteados = [];
